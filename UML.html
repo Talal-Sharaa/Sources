@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a webpage that displays a table of learning objectives and their sources."
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UML Diagram with Mermaid.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" href="/assets/style.css" />
+<script src="https://unpkg.com/gojs/release/go.js"></script>
+
+  </head>
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./sources.html">Sources</a></li>
+        <li><a href="./prerequisites.html">prerequisites</a></li>
+        <li><a href="./UML.html">UML</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div class="mermaid">
+        classDiagram
+      
+        Article : +title (string)
+        Article : +content (string)
+        Article : +timestamp (datetime)
+        Article : +publisherID (address)
+        Article : +articleHash (string)
+        Article : +versionHistory (array of ArticleVersion)
+      
+        ArticleVersion : +versionNumber (integer)
+        ArticleVersion : +articleHash (string)
+        ArticleVersion : +editorID (address)
+        ArticleVersion : +editTimestamp (datetime)
+      
+        Publisher : +publisherID (address)
+        Publisher : +registrationTimestamp (datetime)
+        Publisher : +reputationScore (integer)
+        Publisher : +registerPublisher()
+        Publisher : +submitArticle()
+        Publisher : +updateArticle()
+      
+        Reader : +readerID (address)
+      
+        SmartContract : +getArticle()
+        SmartContract : +getArticleHistory()
+        SmartContract : +verifyPublisher()
+        SmartContract : +verifyReader()
+      
+        SmartContract <|-- Article : manages
+        SmartContract <|-- Publisher : manages
+        SmartContract <|-- Reader : manages
+        Article *-- ArticleVersion : has a 
+      </div>
+      
+      
+
+    <script>
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>

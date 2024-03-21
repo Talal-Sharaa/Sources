@@ -13,6 +13,7 @@
     />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>Learning Objectives</title>
+    <link rel="stylesheet" href="/assets/style.css" />
     <style>
       table {
         width: 100%;
@@ -37,91 +38,130 @@
   </head>
   <body>
     <header>
-      <h1>Learning Objectives</h1>
+      <nav>
+        <ul class="navbar">
+          <li><a href="./index.html" class="active">Home</a></li>
+          <li><a href="./sources.html">Sources</a></li>
+          <li><a href="./prerequisites.html">prerequisites</a></li>
+          <li><a href="./UML.html">UML</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
+      <h1>Milestones</h1>
+      <p>
+        Below is the milestones that we should finish to complete our project.
+      </p>
       <table>
         <thead>
           <tr>
-            <th>Time Frame</th>
-            <th>Objective</th>
-            <th>Sources</th>
+            <th>Time</th>
+            <th>Milestone</th>
+            <th>Details</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>13/03/24 - 19/03/24</td>
-            <td>Understanding the concepts of Blockchain and Ethereum</td>
+            <td>21/03/2024</td>
+            <td>Design and implement the core smart contract logic.</td>
             <td>
-              <b>Course</b>
-              <a href="https://send.cm/d/zcz8">Block-Chain A-Z</a>
-              <br />
-              <b>Website</b>:
-              <a href="https://ethereum.org/en/developers/docs/"
-                >Ethereum Documentation</a
-              >
+              <ul>
+                <li>
+                  Define detailed data structures for storing news articles
+                  (title, content, timestamp, source/publisher ID).
+                </li>
+                <li>
+                  Draft core smart contract functions for publisher registration
+                  and article submission.
+                  <ul>
+                    <li>Storing article data in the smart contract.</li>
+                    <li>Retrieving article data from the smart contract.</li>
+                    <li>Updating article data in the smart contract.</li>
+                    <li>Registering publishers in the smart contract.</li>
+                  </ul>
+                </li>
+              </ul>
             </td>
           </tr>
           <tr>
-            <td>20/3/24 - 03/04/24</td>
+            <td>02/04/2024</td>
+            <td>Design and implement the core smart contract logic.</td>
             <td>
-              Solidity Crash Course, Learn to write smart contracts using
-              solidity
-            </td>
-            <td>
-              <b>Course</b>:
-              <a href="https://cryptozombies.io/">cryptozombies</a> <br />
-              <b>Website</b>:
-              <a href="https://docs.soliditylang.org/en/v0.8.24/"
-                >Solidity Documentation</a
-              >
-              <br />
-              <a
-                href="https://www.youtube.com/playlist?list=PLS5SEs8ZftgXlCGXNfzKdq7nGBcIaVOdN"
-                >Web3.JS</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>04/04/24 - 10/4/24</td>
-            <td>
-              Smart Contract Design (News Focus): Outline the core functions of
-              your news storage and documentation smart contracts. Consider
-              immutability, ownership, and potential licensing models. Start
-              drafting the code.
-            </td>
-            <td>
-              <b>Course</b>:
-              <a href="https://www.youtube.com/watch?v=jcgfQEbptdo">
-                Learn Blockchain & Solidity Development Full Course 2024</a
-              >
-              <br />
-              <a
-                href="https://www.youtube.com/playlist?list=PLbbtODcOYIoFdQ37ydykQNO-MNGER6mtd"
-                >OpenZeppelin Tutorial</a
-              >
+              <ul>
+                <li>
+                  Implement permissioning system within the smart contract
+                  (defining access levels).
+                  <ul>
+                    <li>Define access levels for publishers and readers.</li>
+                    <li>
+                      Implement access control functions for publishers and
+                      readers.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </td>
           </tr>
           <tr>
-            <td>11/4/24 - 01/05/24</td>
+            <td>10/04/2024</td>
+            <td>Unit testing functions</td>
+            <td>Unit testing all the functions in the smart contracts.</td>
+          </tr>
+          <tr>
+            <td>14/04/2024</td>
+            <td>Pluralsight</td>
             <td>
-              Building the smart contracts, the blockchain, and setting
-              permessions
-            </td>
-            <td>
-              <a href="https://www.youtube.com/watch?v=Tnyrp_W5wdM"
-                >Permessions tutorial</a
-              >
+              <ul>
+                <li>
+                  Retrieving History: Create functions within your smart
+                  contract to fetch the edit history of an article.
+                </li>
+                <li>
+                  History Visualization: Design a way to display article history
+                  within your frontend interface. Clearly show changes between
+                  versions, who made the edits, and when those edits occurred.
+                </li>
+              </ul>
             </td>
           </tr>
           <tr>
-            <td>02/05/24 - 15/05/24</td>
-            <td>Finishing the Backend integration and Testing Everything</td>
+            <td>21/4/2024</td>
+            <td>Frontend Development</td>
             <td>
-              <a
-                href="https://www.youtube.com/watch?v=vLEB-YRukws&list=PLbbtODcOYIoHnn7pbX1fOeA8TopL1fpRL"
-                >Smart contract testing course</a
-              >
+                <ul>
+                    <li>
+                        Begin developing a web-based frontend to interact with the
+                        backend and present news articles to users.
+                      </li>
+                      <li>
+                        Designing Reader pages to view articles and search for articles.
+                      </li>
+                </ul>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>28/4/2024</td>
+            <td>Publisher Interface</td>
+            <td>
+              <ul>
+                <li>Designing Publisher submission and registration pages</li>
+                <li>
+                  in addition to extra visual options for publishers to manage
+                  their articles.
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>06/05/2024</td>
+            <td>Reader Interface</td>
+            <td>
+              <ul>
+                <li>
+                    Wrapping up and testing all functionalities
+                </li>
+              </ul>
             </td>
           </tr>
         </tbody>
